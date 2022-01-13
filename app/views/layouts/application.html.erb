@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Hellosignror</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  import HelloSign from "hellosign-embedded";
+
+const client = new HelloSign({
+  clientId: "e8bef94dd5a2e23cf4e32bfd9de4fd4a"
+});
+
+client.open("https://app.hellosign.com/editor/embeddedSign?signature_id=ded94b3e06faaef1f3e59d23c4773561&token=a7fc32226cfc5404f22ca7f609bbcb51", {
+  testMode: true
+});
+  </body>
+</html>
